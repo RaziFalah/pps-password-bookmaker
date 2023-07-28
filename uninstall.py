@@ -30,5 +30,3 @@ elif (state == "n" or state == "N"):
 else:
     print("unkown option!")
     print("Aborted by session!")
-
-
