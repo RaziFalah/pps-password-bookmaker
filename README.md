@@ -1,10 +1,10 @@
 <h1>pps-password-bookmaker</h1>
-Secure cli password bank program for Debian-based linux distros, programmed in python
+Secure cli password bank program for Debian-based linux distros, programmed using python
 
-#Important to know before downloading
-Please install in you ~ directory! otherwise the program will not work!
-Please do not change any name of the files or the place of the files, otherwise the program will not work!
-Please do not use the program in superuser or root, otherwise the program will not work!
+<h2>Very important to know before downloading</h2>
+Please install in you ~ directory! otherwise the program will not work! <br>
+Please do not change any name of the files or the place of the files, otherwise the program will not work! <br>
+Please do not use the program in superuser or root, otherwise the program will not work! <br>
 
 #Installation guidance
 
