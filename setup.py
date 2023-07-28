@@ -17,7 +17,8 @@ os.system("pip install maskpass --break-system-packages")
 
 
 print("PPS: setting up program env...")
-os.system("mkdir /home/"+usr+"/pps_config")
+os.system("mkdir /home/"+usr+"/pps-password-bookmaker/pps_config")
+os.system("mkdir /home/"+usr+"/pps-password-bookmaker/pps_config/data")
 
 print("Setting up command line interface...")
 f = open("/home/"+usr+"/.bashrc", "a")
@@ -34,7 +35,7 @@ import maskpass
 print("[PPS] please set up master password")
 password = maskpass.askpass(mask="")
 
-f = open("/home/"+usr+"/pps.pass", "a")
+f = open("/home/"+usr+"/pps-password-bookmaker/pps.pass", "a")
 f.write(password)
 f.close()
 
