@@ -48,7 +48,7 @@ elif(len(system.argv) > 11):
     print(Fore.RED + "Fatal error: to many arguments was given ("+str(len(system.argv) - 2)+")")
     exit()
 else:
-    print(Fore.YELLOW + "Ignoring non fatal errors! ("+str(len(system.argv)-1)+")" + Fore.RESET)
+    pass
 
 
 with open('/home/'+usr+'/pps-password-bookmaker/pps.pass') as f:
