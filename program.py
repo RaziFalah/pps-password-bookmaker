@@ -78,4 +78,4 @@ else:
 
 
 
-print("No errors were encounterd!")
+print("No errors were encounterd but program unexpectedly closed with return code (0)")
