@@ -11,7 +11,7 @@ Please do not use the program in superuser or root, otherwise the program will n
 ``$ cd`` </br>
 ``$ git clone https://github.com/RaziFalah/pps-password-bookmaker`` </br>
 ``$ cd pps-password-bookmaker`` </br>
-``$p python3 setup.py`` </br>
+``$ python3 setup.py`` </br>
 
 Now the program will instruct you how to take care of the rest. Please enjoy!
 
