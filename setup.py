@@ -16,11 +16,12 @@ os.system("pip install maskpass --break-system-packages")
 
 
 
-
+print("PPS: setting up program env...")
+os.system("mkdir /home/"+usr+"/pps_config")
 
 print("Setting up command line interface...")
 f = open("/home/"+usr+"/.bashrc", "a")
-f.write("alias pps='python3 /home/"+usr+"/Desktop/programming/password-saver/program.py'")
+f.write("alias pps='python3 /home/"+usr+"/pps-password-bookmaker/program.py'")
 f.close()
 t.sleep(3)
 print("Reinitializing session configuration ...")
@@ -39,7 +40,9 @@ f.close()
 
 print("PPS: command line interface was successfuly added")
 t.sleep(2)
-print("Terminal session was successfuly reinitialized...")
+print("PPS: configuritions was successfuly set")
+t.sleep(2)
+print("Terminal session was successfuly reinitialized")
 t.sleep(2)
 print("Program was successfuly installed!")
 print("use pps -h for manual")
