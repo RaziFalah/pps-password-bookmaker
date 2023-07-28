@@ -10,10 +10,22 @@ import os
 
 #Functions start
 
-def on_login_pass():
-    pass
+def on_login_pass(password, desc):
+    print("Processing...")
+    f = open("/home/"+usr+"/pps-password-bookmaker/pps_config/data/pass.list", "a")
+    f.write("==================================\n|"+desc+"   "+password+"|\n==================================")
+    f.close()
+    t.sleep(2)
+    print("Done")
+    exit()
 
 
+def uninstall(state):
+    if(state == "y" or "Y"):
+      os.system("python3 /home/"+usr+"/pps-password-bookmaker/uninstall.py")
+    else:
+      print("Proccess was aborted by user!")
+      exit()
 
 
 #Functions end
@@ -39,7 +51,7 @@ else:
     print(Fore.YELLOW + "Ignoring non fatal errors! ("+str(len(system.argv)-1)+")" + Fore.RESET)
 
 
-with open('/home/'+usr+'/pps.pass') as f:
+with open('/home/'+usr+'/pps-password-bookmaker/pps.pass') as f:
     master_password = f.readline()
 
 import maskpass
@@ -59,15 +71,29 @@ if tries == -1:
 if(system.argv[1] == "-h" or system.argv[1] == "man"):
     print(""" 
     pps -s [description] [password] : use to store on-login password
+    pps -v : use to view password list
+    pps -uninstall [Yes] : use to remove pps from your system, use the y argu for confirmation
     """)
     exit()
 elif(system.argv[1] == "-s"):
     if(len(system.argv) == 4):
-        on_login_pass()
+        on_login_pass(system.argv[2], system.argv[3])
     else:
-        print(Fore.RED + "Fatal error: pps -s expects at least 2 argument but was given "+str(len(system.argv)-2)+" !" + Fore.RESET)
+        print(Fore.RED + "Fatal error: pps -s expects 2 argument but was given "+str(len(system.argv)-2)+" !" + Fore.RESET)
         print("Use 'pps -h' or 'pps man' to view options!")
         exit()
+elif(system.argv[1] == "-uninstall"):
+    if(len(system.argv) == 3):
+            uninstall(system.argv[2])
+    else:
+        print(Fore.RED + "Fatal error: pps -uninstall expects 1 argument but was given "+str(len(system.argv)-2)+" !" + Fore.RESET)
+        print("Use 'pps -h' or 'pps man' to view options!")
+        exit()
+elif(system.argv[1] == "-v" or system.argv[1] == "-view"):
+    os.system("cat /home/"+usr+"/pps-password-bookmaker/pps_config/data/pass.list")
+    input("\nType anything to exit: ")
+    os.system("clear")
+    exit()
 else:
     print("PPS: " + Fore.YELLOW + " unkown option! ("+system.argv[1]+")" + Fore.RESET)
     print("Use 'pps -h' or 'pps man' to view options!")
