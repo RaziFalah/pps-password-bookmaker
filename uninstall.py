@@ -11,7 +11,7 @@ if (state == "Y" or state == "y"):
         lines = f.readlines()
     with open("/home/"+usr+"/.bashrc", "w") as f:
         for line in lines:
-            if line.strip("\n") != "alias pps='python3 /home/"+usr+"/Desktop/programming/password-saver/program.py'":
+            if line.strip("\n") != "alias pps='python3 /home/"+usr+"/pps-password-bookmaker/program.py'":
                 f.write(line)
     print("PPS: pps was successfuly uninstalled from system")
     t.sleep(3)
@@ -19,7 +19,10 @@ if (state == "Y" or state == "y"):
     t.sleep(3)
     t.sleep(2)
     print("Cleaning...")
-    os.system("rm /home/"+usr+"/pps.pass")
+    os.system("rm /home/"+usr+"/pps-password-bookmaker/pps.pass")
+    os.system("rm pps_config/data/pass.list")
+    os.system("rmdir pps_config/data")
+    os.system("rmdir pps_config")
     t.sleep(2)
     print("Done")
     os.system("exec bash --login")
