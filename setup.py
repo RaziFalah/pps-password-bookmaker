@@ -14,7 +14,9 @@ print("installing requirements...")
 t.sleep(3)
 os.system("pip install maskpass --break-system-packages")
 
-
+print("Recognizing manual...")
+t.sleep(3)
+os.system("mv README.md man.html")
 
 print("PPS: setting up program env...")
 os.system("mkdir /home/"+usr+"/pps-password-bookmaker/pps_config")
