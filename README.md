@@ -2,8 +2,8 @@
 Secure cli password bank program for Debian-based linux distros, programmed using python
 <image src="https://github-production-user-asset-6210df.s3.amazonaws.com/92949627/256702025-5458c3da-467f-4648-b1e7-c2436ee68f52.png"></image>
 <h1>Current features</h1>
-Store on-login password
-View password lists
+Store on-login password<br>
+View password lists<br>
 Automatic uninstallation
 
 
