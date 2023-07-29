@@ -29,5 +29,5 @@ After a successful installation please run:</br></br>
 For manual
 
 <h2>Returned error codes</h2>
-Code (0) : Program exsited unexpectedly (ignorable)
+Code (0) : Program exsited unexpectedly (ignorable)<br>
 Code (1) : Program could not proccess requested opration (Fatal)
