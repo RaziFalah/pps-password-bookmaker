@@ -68,13 +68,15 @@ if tries == -1:
     print("Too many tries, please try again later")
     exit()
 
-if(system.argv[1] == "-h" or system.argv[1] == "man"):
+if(system.argv[1] == "-h" or system.argv[1] == "-help"):
     print(""" 
     pps -s [description] [password] : use to store on-login password
     pps -v : use to view password list
     pps -uninstall [Yes] : use to remove pps from your system, use the y argu for confirmation
     """)
     exit()
+if(system.argv[1] == "man" or system.argv[1] == "-man"):
+    os.system("open file:///home/"+usr+"/pps-password-bookmaker/man.html")
 elif(system.argv[1] == "-s"):
     if(len(system.argv) == 4):
         on_login_pass(system.argv[2], system.argv[3])
