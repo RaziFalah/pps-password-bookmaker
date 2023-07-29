@@ -18,7 +18,7 @@
     
    <h2>Very important to know before installation</h2>
     
-  Please install in your ~ (/home/$usr) directory! otherwise the program will not work! after installation you can run the program system-wide<br>
+  Please install in your ~ (/home/$usr) directory and make sure you are not in root! otherwise the program will not work! after installation you can run the program system-wide<br>
     Please do not change any name of the files or the place of the files, otherwise the program will not work! <br>
     Please do not run the program in superuser or root, The command-line can be used system-wide but not while you&#39;re a super-privileged user <br>
     
