@@ -23,7 +23,7 @@
     Please do not run the program in superuser or root, The command-line can be used system-wide but not while you&#39;re a super-privileged user <br>
     
   <h2>Installation guidance</h2>
-    
+    <code>$ exit</code> (Only if user is super-privileged) </br> 
    <code>$ cd</code> </br>
     <code>$ git clone https://github.com/RaziFalah/pps-password-bookmaker</code> </br>
     <code>$ cd pps-password-bookmaker</code> </br>
